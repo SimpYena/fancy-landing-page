@@ -1,0 +1,222 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════════
+   TERRAFORMA LANDSCAPES — NATURE-MODERN DESIGN SYSTEM
+   Tailwind CSS v4 — CSS-first @theme configuration
+═══════════════════════════════════════════════════════ */
+
+@theme {
+  /* ── Color Palette ── */
+  /* Primary: Deep Forest Green */
+  --color-forest-50:  oklch(97% 0.02 155);
+  --color-forest-100: oklch(93% 0.04 155);
+  --color-forest-200: oklch(85% 0.07 155);
+  --color-forest-300: oklch(72% 0.10 155);
+  --color-forest-400: oklch(58% 0.13 155);
+  --color-forest-500: oklch(45% 0.14 155);
+  --color-forest-600: oklch(35% 0.13 155);
+  --color-forest-700: oklch(28% 0.11 155);   /* ≈ #1A3C34 */
+  --color-forest-800: oklch(22% 0.09 155);
+  --color-forest-900: oklch(15% 0.06 155);
+
+  /* Secondary: Warm Terracotta */
+  --color-terra-50:   oklch(97% 0.02 48);
+  --color-terra-100:  oklch(93% 0.05 48);
+  --color-terra-200:  oklch(86% 0.09 48);
+  --color-terra-300:  oklch(76% 0.13 48);
+  --color-terra-400:  oklch(68% 0.17 48);   /* ≈ #C27D5E */
+  --color-terra-500:  oklch(58% 0.17 48);
+  --color-terra-600:  oklch(48% 0.15 48);
+  --color-terra-700:  oklch(38% 0.12 48);
+  --color-terra-800:  oklch(28% 0.09 48);
+  --color-terra-900:  oklch(20% 0.06 48);
+
+  /* Accent: Soft Sage */
+  --color-sage-50:    oklch(97% 0.02 130);
+  --color-sage-100:   oklch(93% 0.04 130);
+  --color-sage-200:   oklch(87% 0.07 130);
+  --color-sage-300:   oklch(78% 0.09 130);
+  --color-sage-400:   oklch(70% 0.10 130);   /* ≈ #A3B18A */
+  --color-sage-500:   oklch(62% 0.10 130);
+  --color-sage-600:   oklch(52% 0.09 130);
+  --color-sage-700:   oklch(42% 0.08 130);
+  --color-sage-800:   oklch(32% 0.06 130);
+  --color-sage-900:   oklch(22% 0.04 130);
+
+  /* Neutral: Stone & Off-white */
+  --color-stone-50:   oklch(98% 0.005 80);
+  --color-stone-100:  oklch(95% 0.01 80);
+  --color-stone-200:  oklch(90% 0.015 80);
+  --color-stone-300:  oklch(82% 0.02 80);
+  --color-stone-400:  oklch(70% 0.02 80);
+  --color-stone-500:  oklch(58% 0.02 80);
+  --color-stone-600:  oklch(46% 0.015 80);
+  --color-stone-700:  oklch(35% 0.012 80);
+  --color-stone-800:  oklch(25% 0.008 80);
+  --color-stone-900:  oklch(15% 0.005 80);
+  --color-offwhite:   oklch(98.5% 0.008 90);
+
+  /* Semantic aliases */
+  --color-primary:         var(--color-forest-700);
+  --color-primary-light:   var(--color-forest-500);
+  --color-primary-dark:    var(--color-forest-900);
+  --color-secondary:       var(--color-terra-400);
+  --color-secondary-dark:  var(--color-terra-600);
+  --color-accent:          var(--color-sage-400);
+  --color-surface:         var(--color-offwhite);
+  --color-muted:           var(--color-stone-500);
+
+  /* ── Typography ── */
+  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-sans:    "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --font-size-2xs:            0.625rem;
+  --font-size-2xs--line-height: 1rem;
+  --font-size-xs:             0.75rem;
+  --font-size-xs--line-height:  1.125rem;
+  --font-size-fluid-sm:       clamp(0.875rem, 1.5vw, 1rem);
+  --font-size-fluid-base:     clamp(1rem, 1.8vw, 1.125rem);
+  --font-size-fluid-lg:       clamp(1.125rem, 2vw, 1.375rem);
+  --font-size-fluid-xl:       clamp(1.375rem, 3vw, 1.75rem);
+  --font-size-fluid-2xl:      clamp(1.75rem, 4vw, 2.5rem);
+  --font-size-fluid-3xl:      clamp(2.25rem, 5vw, 3.5rem);
+  --font-size-fluid-4xl:      clamp(3rem, 7vw, 5rem);
+  --font-size-fluid-5xl:      clamp(3.5rem, 9vw, 7rem);
+
+  /* ── Spacing ── */
+  --spacing-18:   4.5rem;
+  --spacing-22:   5.5rem;
+  --spacing-26:   6.5rem;
+  --spacing-30:   7.5rem;
+  --spacing-34:   8.5rem;
+  --spacing-38:   9.5rem;
+  --spacing-42:   10.5rem;
+  --spacing-section: clamp(4rem, 8vw, 8rem);
+
+  /* ── Border Radius ── */
+  --radius-4xl: 2rem;
+  --radius-5xl: 2.5rem;
+
+  /* ── Shadows ── */
+  --shadow-nature:  0 4px 20px oklch(28% 0.11 155 / 0.15), 0 1px 4px oklch(28% 0.11 155 / 0.08);
+  --shadow-card:    0 2px 12px oklch(15% 0.05 80 / 0.08), 0 8px 32px oklch(15% 0.05 80 / 0.06);
+  --shadow-hero:    0 20px 80px oklch(15% 0.05 80 / 0.25);
+  --shadow-glass:   0 8px 32px oklch(15% 0.05 80 / 0.12), inset 0 1px 0 oklch(100% 0 0 / 0.15);
+
+  /* ── Animations ── */
+  --animate-fade-up:      fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-fade-in:      fadeIn 0.5s ease forwards;
+  --animate-slide-right:  slideRight 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+  /* ── Breakpoints ── */
+  --breakpoint-xs:  30rem;
+  --breakpoint-3xl: 112rem;
+}
+
+/* ── Keyframes ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes slideRight {
+  from { transform: scaleX(0); transform-origin: left; }
+  to   { transform: scaleX(1); transform-origin: left; }
+}
+
+/* ── Custom Utilities ── */
+@utility glass {
+  background: oklch(100% 0 0 / 0.08);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid oklch(100% 0 0 / 0.15);
+}
+
+@utility glass-dark {
+  background: oklch(20% 0.06 155 / 0.75);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid oklch(100% 0 0 / 0.08);
+}
+
+@utility text-gradient-forest {
+  background: linear-gradient(135deg, var(--color-forest-700) 0%, var(--color-sage-400) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@utility text-gradient-warm {
+  background: linear-gradient(135deg, var(--color-terra-400) 0%, var(--color-forest-700) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@utility section-padding {
+  padding-top: var(--spacing-section);
+  padding-bottom: var(--spacing-section);
+}
+
+@utility masonry-grid {
+  columns: 1;
+  column-gap: 1.5rem;
+}
+
+/* ── Custom Variants ── */
+@variant hocus (&:hover, &:focus-visible);
+
+/* ── Base Styles ── */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-fluid-base);
+    background-color: var(--color-offwhite);
+    color: var(--color-stone-800);
+    line-height: 1.65;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  ::selection {
+    background-color: var(--color-sage-200);
+    color: var(--color-forest-900);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-sage-400);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: var(--color-stone-100); }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-sage-400);
+    border-radius: 9999px;
+  }
+}
