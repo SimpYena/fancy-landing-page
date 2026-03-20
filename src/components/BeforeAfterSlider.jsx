@@ -59,7 +59,6 @@ export default function BeforeAfterSlider({ before, after, label = 'Before and a
       onTouchStart={(e) => calcPosition(e.touches[0].clientX)}
       style={{ touchAction: 'none' }}
       aria-label={label}
-      role="img"
     >
       {/* After image (full width, underneath) */}
       <img
