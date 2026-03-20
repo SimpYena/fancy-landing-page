@@ -34,7 +34,6 @@ const INITIAL_FORM = {
   budget: '',
   address: '',
   message: '',
-  hearAboutUs: '',
   consent: false,
 }
 
@@ -157,6 +156,7 @@ export default function QuoteForm() {
                 id="lastName" type="text" autoComplete="family-name" required
                 value={form.lastName} onChange={(e) => update('lastName', e.target.value)}
                 className={inputCls(errors.lastName)}
+                aria-describedby={errors.lastName ? 'lastName-error' : undefined}
               />
             </Field>
           </div>
@@ -166,6 +166,7 @@ export default function QuoteForm() {
               id="email" type="email" autoComplete="email" required
               value={form.email} onChange={(e) => update('email', e.target.value)}
               className={inputCls(errors.email)}
+              aria-describedby={errors.email ? 'email-error' : undefined}
             />
           </Field>
 

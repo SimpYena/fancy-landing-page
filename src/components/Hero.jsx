@@ -35,7 +35,7 @@ export default function Hero() {
           src={HERO_IMAGE}
           alt=""
           className="w-full h-full object-cover object-center"
-          fetchpriority="high"
+          fetchPriority="high"
           decoding="async"
         />
         {/* Dark gradient overlay */}
